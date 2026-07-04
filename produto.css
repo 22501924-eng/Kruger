@@ -1,0 +1,922 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}  
+
+body{
+    font-family: "Nunito", sans-serif;
+    
+
+    display: grid;
+    grid-template: 1fr auto / 1fr 5fr;
+}
+
+
+
+
+
+
+/* Base do site */
+
+h1{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 100px;
+}
+
+h2, h3{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+}
+
+h4, h5, h6{
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 58px;
+    line-height: 58px;
+}
+
+h3{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+h4{
+    font-size: 28px;
+    line-height: 28px;
+}
+
+h5{
+    font-size: 24px;
+    line-height: 24px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+p{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+svg{
+    width: 25px;
+}
+
+label{
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: rgb(160, 160, 160);
+}
+
+input{
+    height: 18px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: #4A4A4A;
+    border: none;
+    outline: none;
+}
+
+input[type="checkbox"]{
+    accent-color: rgb(229, 62, 62);
+}
+
+
+
+
+
+
+/* Cabeçalho */
+
+header{
+    height: 100vh;
+    background-color: rgb(229, 62, 62);
+    top: 0;
+    position: sticky;
+    
+    grid-row: 1 / 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px;
+}
+
+/* Topo */
+
+#topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    width: 140px;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(244, 244, 244);
+    background-image: url(logo.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+/* Páginas */
+
+header nav{
+    margin-top: 50px;
+}
+
+header li{
+    width: 160px;
+    height: 45px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+header nav li:hover{
+    background-color: rgba(176, 0, 15, 0.4);
+}
+
+header nav a{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#colorido{
+    background-color: rgb(176, 0, 15);
+}
+
+
+
+
+
+
+
+
+
+
+/* Site */
+
+main{
+    grid-row: 1;
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 4%;
+}
+
+section{
+    width: 100%;
+}
+
+main p{
+    color: #4A4A4A;
+}
+
+main hr{
+    border: 1px solid rgb(210, 210, 210); 
+    border-radius: 2px;
+}
+
+.vermeio{
+    color: rgb(229, 62, 62) !important;
+}
+
+.black{
+    color: black !important;
+}
+
+.flex{
+    display: flex;
+}
+
+
+
+
+
+
+/* Principal Topo */
+
+#produto-topo h2 svg{
+    width: 50px;
+    margin-right: 7px;
+}
+
+#produto-topo h2 path{
+    stroke: rgb(229, 62, 62);
+    stroke-width: 35px;
+}
+
+#produto-topo h2{
+    font-weight: 800;
+    color: rgb(229, 62, 62);
+
+    display: flex;
+    align-items: center;
+}
+
+#produto-topo p{
+    display: flex;
+    align-items: center;
+    margin: 15px 0 47px 0;
+}
+
+#produto-topo p a{
+    color: #4A4A4A;
+}
+
+#produto-topo .vermeio{
+    font-weight: 700;
+}
+
+#produto-topo p svg{
+    width: 16px;
+    margin: 0 6px;
+}
+
+
+
+
+
+
+/* Combao */
+
+#combao{
+    display: grid;
+    grid-template-columns: 45fr 50fr;
+}
+
+
+/* Combao Esquerda */
+
+#produto-grande-principal{
+    width: 100%;
+    aspect-ratio: 1 / 0.75;
+
+
+    background-image: url(produto-grande.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+
+/* Combao Esquerda Sessão */
+
+#esquerda svg{
+    width: 25px;
+}
+
+.seta{
+    width: 45px;
+    aspect-ratio: 1 /1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.seta:hover{
+    background-color: rgb(245, 245, 245)
+}
+
+#sessao{
+    display: grid;
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+
+    margin-top: 28px;
+}
+
+#sessao div{
+    aspect-ratio: 1 / 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#produto-grande{
+    background-image: url(produto-grande.png);
+}
+
+#queijo{
+    background-image: url(queijo.png);
+}
+
+#batata-bonitona{
+    background-image: url(batata-bonitona.png);
+}
+
+#refri-bonitao{
+    background-image: url(refri-bonitao.png);
+}
+
+#selecionado{
+    border-radius: 11.5px !important;
+    box-shadow: 0 0 0 3px rgb(229, 62, 62);
+    padding: 2px;
+}
+
+.selecionados{
+    border-radius: 11.5px !important;
+    padding: 2px;
+}
+
+.selecionados:hover{
+    box-shadow: 0 0 0 3px rgb(229, 62, 62);
+}
+
+
+
+
+
+
+
+
+/* Combao Direita */
+
+#direita{
+    margin-left: 50px;
+}
+
+#destaque{
+    width: 120px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: rgb(229, 62, 62);
+    background-color: rgb(255, 192, 24);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 5px 14px;
+    margin-bottom: 15px;
+}
+
+#direita h2{
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 75px;
+    margin-bottom: 15px;
+}
+
+#avaliacao{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#avaliacao svg{
+    width: 18px;
+    margin-right: 2px;
+}
+
+#avaliacao p{
+    font-size: 14px;
+    margin-left: 7px;
+}
+
+#texto{
+    width: 80%;
+    margin-bottom: 18px;
+}
+
+
+/* Combao Direita Embaixo */
+
+#grid-total-maluco-slk{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Preço do Hamburger */
+
+#apenas{
+    color: rgb(229, 62, 62);
+    font-weight: 700;
+    margin-top: 22px;
+}
+
+#display-flex{
+    display: flex;
+    position: relative;
+}
+
+#preco{
+    font-size: 52px;
+    margin: 22px 0 30px 0;
+}
+
+#preco span{
+    font-size: 20px;
+}
+
+#noventa{
+    position: absolute;
+    top: 27px;
+    left: 92px;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+
+/* O Combo Inclui */
+
+#grid-total-maluco-slk{
+    margin: 15px 0 20px 0;
+}
+
+#grid-total-maluco-slk p{
+    font-size: 18px;
+}
+
+#combo-bacon, #combo-batata, #combo-refri{
+    display: flex;
+    align-items: center;
+}
+
+#combo-bacon svg{
+    width: 30px;
+    margin-right: 5px;
+}
+
+#combo-batata img, #combo-refri img{
+    width: 20px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+
+/* Pedido e Favoritos */
+
+#grid-total-tmb-maluco-slk-n-compensa{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#pedido, #favorito{
+    width: 100%;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px 0;
+}
+
+#pedido span, #favorito span{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#pedido{
+    background-color: rgb(229, 62, 62);
+    box-shadow: 0 6px 0 rgb(176, 0, 15);
+    transition: all 0.3s ease;
+}
+
+#pedido:hover{
+    transform: translateY(6px);
+    box-shadow: none;
+}
+
+#favorito{
+    color: rgb(229, 62, 62);
+    border: 2px solid rgb(229, 62, 62);
+    transition: all 0.3s ease;
+}
+
+#favorito:hover{
+    background-color: rgba(229, 62, 62, 0.1);
+}
+
+
+
+
+
+
+/* Informacoes */
+
+#informacoes{
+    height: 100%;
+    max-height: 400px;
+    margin: 50px 0;
+}
+
+#tres-colunas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    margin: 30px 0;
+}
+
+#informacoes h3{
+    margin-bottom: 15px;
+}
+
+
+/* Ingredientes Esquerda */
+
+#coluna1 h3{
+    margin-bottom: 28px;
+}
+
+#coluna1 ul{
+    display: grid;
+    gap: 7px;
+}
+
+#coluna1 li{
+    align-items: center;
+}
+
+#coluna1 li::before {
+  content: "•";
+  color: #ff0000;
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+
+/* Informacoes Meio */
+
+#align-items{
+    height: 100%;
+    max-height: 270px;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+#coluna2 .flex div{
+    margin-left: 10px;
+}
+
+#coluna2 p{
+    font-size: 14px;
+}
+
+#coluna2 .black{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#coluna2 svg{
+    width: 35px;
+}
+
+
+/* Personalize Direita */
+
+#coluna3{
+    height: 100%;
+
+    border: 3px solid #FDE2A2;
+    border-radius: 25px;
+}
+
+#personalize{
+    height: 37%;
+    background-color: #FEF3D8;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+
+    padding: 14px;
+}
+
+#extra{
+    height: 63%;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+
+    background-color: #FFF9ED;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+
+    padding: 7px 15px;
+}
+
+.span-check{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.span-check input[type="checkbox"]{
+    width: 15px;
+}
+
+#extra p{
+    line-height: 16px;
+    justify-content: space-between;
+}
+
+#extra .vermeio{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+/* Produtos */
+
+#produtos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+#produtos a{
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+#produtos a:hover{
+    border: 1px solid rgb(229, 62, 62);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+}
+
+
+/* Produtos + */
+
+.plus{
+    width: 40px;
+    aspect-ratio: 1 / 1;
+
+    font-size: 40px;
+    font-weight: 700;
+    background-color: rgb(229, 62, 62);
+    line-height: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 32px;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Produtos Imagem */
+
+.produto-imagem{
+    width: 100%;
+    height: 270px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#combo{
+    background-image: url(combo-pequeno.png);
+}
+
+#batata{
+    background-image: url(batata.png);
+}
+
+#refri{
+    background-image: url(refri.png);
+}
+
+#sundae{
+    background-image: url(sundae.png);
+}
+
+
+/* Produtos Texto */
+
+.texto-produto{
+    padding: 15px;
+}
+
+.texto-produto h5{
+    font-size: 16px;
+    color: rgb(20, 20, 20);
+    margin-bottom: 10px;
+}
+
+#texto-vermeio{
+    font-size: 22px;
+    font-family: "Baloo 2", sans-serif;
+    color: rgb(229, 62, 62);
+    font-weight: 800;
+}
+
+
+
+
+
+
+
+
+
+/* Rodapé */
+
+footer{
+    color: white;
+    background-color: rgb(176, 0, 15);
+
+    grid-row: 2;
+    grid-column: 2;
+
+    padding: 50px 40px;
+}
+
+footer h6{
+    line-height: 60px;
+}
+
+
+/* Rodapé de cima */
+
+footer #cima{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+/* Kruger logo */
+
+#Kruger_rodape{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+footer #logo{
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#texto_rodape{
+    display: flex;
+    flex-direction: column;
+}
+
+#texto_rodape h4{
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+
+/* Navegação */
+
+#navegacao_rodape ul{
+    display: flex;
+}
+
+#navegacao_rodape li{
+    height: 28px;
+}
+
+#navegacao_rodape a:hover{
+    text-decoration: underline;
+}
+
+#margin-right{
+    margin-right: 200px;
+}
+
+
+/* Contato */
+
+#contato_rodape{
+    margin-right: 40px;
+}
+
+#contato_rodape p{
+    margin-bottom: 10px;
+}
+
+#icones{
+    display: flex;
+}
+
+#icones a{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(187, 58, 71);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 7px;
+}
+
+#icones a:hover{
+    background-color: rgb(255, 192, 24);
+}
+
+#icones a:hover path{
+    fill: rgb(176, 0, 15);
+}
+
+#icones svg{
+    width: 70%;
+}
+
+ 
+
+/* Rodapé de baixo */
+
+footer hr{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+footer #baixo{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+footer #baixo p{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}

@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}  
+
+body{
+    font-family: "Nunito", sans-serif;
+    
+
+    display: grid;
+    grid-template: 1fr auto / 1fr 5fr;
+}
+
+
+
+
+
+
+/* Base do site */
+
+h1{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 100px;
+}
+
+h2, h3{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+}
+
+h4, h5, h6{
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 58px;
+    line-height: 58px;
+}
+
+h3{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+h4{
+    font-size: 28px;
+    line-height: 28px;
+}
+
+h5{
+    font-size: 24px;
+    line-height: 24px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+p{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+svg{
+    width: 25px;
+}
+
+label{
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: rgb(160, 160, 160);
+}
+
+input{
+    height: 18px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: #4A4A4A;
+    border: none;
+    outline: none;
+}
+
+textarea{
+    height: 18px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: #4A4A4A;
+    border: none;
+    outline: none;
+    resize: vertical;
+}
+
+textarea::placeholder{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: rgb(160, 160, 160);
+}
+
+
+
+
+
+
+/* Cabeçalho */
+
+header{
+    height: 100vh;
+    background-color: rgb(229, 62, 62);
+    top: 0;
+    position: sticky;
+    
+    grid-row: 1 / 2;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px;
+}
+
+/* Topo */
+
+#topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    width: 140px;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(244, 244, 244);
+    background-image: url(logo.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+/* Páginas */
+
+header nav{
+    margin-top: 50px;
+}
+
+header li{
+    width: 160px;
+    height: 45px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px 0;
+}
+
+header nav li:hover{
+    background-color: rgba(176, 0, 15, 0.4);
+}
+
+header nav a{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#colorido{
+    background-color: rgb(176, 0, 15);
+}
+
+
+
+
+
+
+
+
+
+
+/* Site */
+
+main{
+    grid-row: 1;
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 4%;
+}
+
+section{
+    width: 100%;
+}
+
+main p{
+    color: #4A4A4A;
+}
+
+main hr{
+    border: 1px solid rgb(230, 230, 230); 
+    border-radius: 2px;
+}
+
+.vermeio{
+    color: rgb(229, 62, 62) !important;
+}
+
+.black{
+    color: black !important;
+}
+
+.flex{
+    display: flex;
+}
+
+
+
+
+
+
+/* Produtos Topo */
+
+#produtos-topo{
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20%;
+}
+
+#produtos-topo h2{
+    font-weight: 800;
+    color: rgb(229, 62, 62);
+}
+
+#produtos-topo .black{
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+}
+
+#produtos-topo p{
+    margin: 15px 0 15px 0;
+}
+
+.barra-amarela{
+    width: 70px;
+    border: 2px solid rgb(255, 192, 24);
+    border-radius: 1px;
+    margin-top: 5px;
+}
+
+#mapa{
+    height: 100%;
+    background-image: url(mapa.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+/* Principal */
+
+#principal{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+
+    margin: 30px 0;
+}
+
+/* Formulário */
+
+#formulario{
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 15px;
+    display: grid;
+
+    padding: 30px;
+}
+
+#formulario input{
+    width: 100%;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+
+    padding: 25px 20px;
+    margin-bottom: 16px;
+}
+
+#formulario input:focus{
+    border: 1px solid rgb(229, 62, 62);
+}
+
+#coluna2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+#formulario textarea{
+    min-height: 210px;
+    max-height: 600px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+#formulario textarea:focus{
+    border: 1px solid rgb(229, 62, 62);
+}
+
+#formulario button{
+    background-color: rgb(229, 62, 62);
+    box-shadow: 0 6px 0 rgb(176, 0, 15);
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+#formulario button:hover{
+    transform: translateY(6px);
+    box-shadow: 0 0 0 rgb(176, 0, 15);
+}
+
+#formulario h5{
+    color: white;
+    font-size: 20px;
+    font-family: "Baloo 2", sans-serif;
+}
+
+#formulario button svg{
+    width: 22px;
+}
+
+#formulario p{
+    color: rgb(160, 160, 160);
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Formas de Contato */
+
+#formas-de-contato{
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    padding: 30px;
+}
+
+.informacoes{
+    display: flex;
+    gap: 15px;
+}
+
+#formas-de-contato .vermeio{
+    font-size: 16px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+#formas-de-contato p{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* Rodapé */
+
+footer{
+    color: white;
+    background-color: rgb(176, 0, 15);
+
+    grid-row: 2;
+    grid-column: 2;
+
+    padding: 50px 40px;
+}
+
+footer h6{
+    line-height: 60px;
+}
+
+
+/* Rodapé de cima */
+
+footer #cima{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+/* Kruger logo */
+
+#Kruger_rodape{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+footer #logo{
+    width: 70px;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#texto_rodape{
+    display: flex;
+    flex-direction: column;
+}
+
+#texto_rodape h4{
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+
+/* Navegação */
+
+#navegacao_rodape ul{
+    display: flex;
+}
+
+#navegacao_rodape li{
+    height: 28px;
+}
+
+#navegacao_rodape a:hover{
+    text-decoration: underline;
+}
+
+#margin-right{
+    margin-right: 200px;
+}
+
+
+/* Contato */
+
+#contato_rodape{
+    margin-right: 40px;
+}
+
+#contato_rodape p{
+    margin-bottom: 10px;
+}
+
+#icones{
+    display: flex;
+}
+
+#icones a{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(187, 58, 71);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 7px;
+}
+
+#icones a:hover{
+    background-color: rgb(255, 192, 24);
+}
+
+#icones a:hover path{
+    fill: rgb(176, 0, 15);
+}
+
+#icones svg{
+    width: 70%;
+}
+
+ 
+
+/* Rodapé de baixo */
+
+footer hr{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+footer #baixo{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+footer #baixo p{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
